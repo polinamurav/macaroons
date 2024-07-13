@@ -27,4 +27,6 @@ exports.watch = function () {
 const {src, task}= require('gulp');
 const ghPages = require('gulp-gh-pages');
 
-task('deploy', () => src('./dist/**/*').pipe(ghPages()));
+task('deploy', () => src('./dist/**/*', '.html').pipe(ghPages()));
+
+//gulp deploy и публикуется
